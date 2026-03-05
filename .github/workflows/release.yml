@@ -12,6 +12,7 @@ jobs:
   release:
     name: Build and Publish Release
     runs-on: ubuntu-latest
+    environment: homebrew-tap-env
 
     steps:
       - name: Checkout
@@ -87,7 +88,6 @@ jobs:
 
       - name: Bump Homebrew formula
         if: steps.semver.outputs.new_tag != '' && secrets.HOMEBREW_TAP_GITHUB_TOKEN != ''
-        environment: homebrew-tap-env
         uses: mislav/bump-homebrew-formula-action@v3.6
         with:
           formula-name: oaicheck
