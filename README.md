@@ -110,3 +110,4 @@ Releases automatically bump the `oaicheck` formula in `kevin51jiang/homebrew-tap
 Required repository secret:
 
 - `HOMEBREW_TAP_GITHUB_TOKEN`: a PAT with push access to `kevin51jiang/homebrew-tap`
+
